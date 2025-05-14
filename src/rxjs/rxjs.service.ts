@@ -27,7 +27,7 @@ export class RxjsService {
     // Здесь можно добавить логику проверки на какой hub делать запрос
     console.log("hub = ", hub);
     const data$ = this.getGithub(text, 10).pipe(toArray());
-    data$.subscribe(() => {});
+    data$.subscribe();
     return await firstValueFrom(data$);
   }
 }

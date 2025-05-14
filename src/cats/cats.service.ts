@@ -13,7 +13,7 @@ export class CatsService {
 
 	async searchCats(width: string): Promise<any> {
 		const data$ = this.getCats(width).pipe();
-		data$.subscribe(() => {});
+		data$.subscribe();
 		return await firstValueFrom(data$);
 	}
 }
